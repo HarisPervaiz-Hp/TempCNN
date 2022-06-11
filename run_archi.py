@@ -28,8 +28,8 @@ def main(sits_path, res_path, feature, noarchi, norun):
 	train_str = 'train_dataset'
 	test_str = 'test_dataset'					
 	#---- Get filenames
-	train_file = sits_path + '/' + train_str + '.csv'
-	test_file = sits_path + '/' + test_str + '.csv'
+	train_file = sits_path + train_str + '.csv'
+	test_file = sits_path + test_str + '.csv'
 	print("train_file: ", train_file)
 	print("test_file: ", test_file)
 
