@@ -7,7 +7,7 @@
 import sys, os
 import numpy as np
 import time
-
+import tensorflow as tf
 import keras
 from keras import layers
 from keras import optimizers
@@ -266,7 +266,7 @@ def trainValTestModel_EarlyAbandon(model, X_train, Y_train_onehot, X_val, Y_val_
 	decay = train_params.setdefault("decay", 0.0)
 
 	#---- optimizer
-	opt = optimizers.Adam(lr=lr, beta_1=beta_1, beta_2=beta_2, decay=decay)
+	opt = tf.keras.optimizers.Adam(lr=lr, beta_1=beta_1, beta_2=beta_2, decay=decay)
 	model.compile(optimizer = opt, loss = "categorical_crossentropy",
 			metrics = ["accuracy"])
 	
